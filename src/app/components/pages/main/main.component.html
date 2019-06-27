@@ -1,14 +1,10 @@
 <main role="main" class="inner cover" >
   <h1 class="cover-heading">Online PNG optimizer by Sijeko</h1>
-  <div class="area">
-    <div id="dropZone">
-      <p class="lead">Drop files here</p></div>
-  </div>
 </main>
 
 <h2 class="cover-heading">Last optimized</h2>
 <div class= "container">
-  <a *ngFor="let Image of images$"  [href]="Image.downloadUrl" >
+  <a *ngFor="let Image of images$" [href]="Image.downloadUrl "  >
     <abbr [title]="
     Image.name+' / '+
     Image.ratio*100+'%'+ ' / ' +

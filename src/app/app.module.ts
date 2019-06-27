@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms';
 import {DataService} from './services/data.service';
 import { AboutComponent } from './components/about/about.component';
 import { MainComponent } from './components/pages/main/main.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UploadsComponent } from './components/uploads/uploads.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { MainComponent } from './components/pages/main/main.component';
     FooterComponent,
     AboutComponent,
     MainComponent,
+    UploadsComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
