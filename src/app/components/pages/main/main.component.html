@@ -1,0 +1,22 @@
+<main role="main" class="inner cover" >
+  <h1 class="cover-heading">Online PNG optimizer by Sijeko</h1>
+  <div class="area">
+    <div id="dropZone">
+      <p class="lead">Drop files here</p></div>
+  </div>
+</main>
+
+<h2 class="cover-heading">Last optimized</h2>
+<div class= "container">
+  <a *ngFor="let Image of images$"  [href]="Image.downloadUrl" >
+    <abbr [title]="
+    Image.name+' / '+
+    Image.ratio*100+'%'+ ' / ' +
+    (Image.original /1024 | number: '1.2-2') + ' Kb → '+
+    (Image.size/1024 | number: '1.2-2') + ' Kb / WebP: ' +
+    (Image.webpSize*100/Image.original| number: '1.2-2')+'%'+ ' / ' +
+    (Image.original /1024 | number: '1.2-2') + ' Kb → '+
+    (Image.webpSize/1024 | number: '1.2-2') + ' Kb' "
+    >
+      <img [src]="Image.url" alt="pic" class="rounded" ></abbr></a>
+</div>

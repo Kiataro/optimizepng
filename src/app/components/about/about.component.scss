@@ -1,0 +1,7 @@
+$sijeko: rgb(255, 134, 5);
+a {
+  &:hover {
+    transition-duration: .5s;
+    color: $sijeko;
+  }
+}
