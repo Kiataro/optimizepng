@@ -11,7 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { MainComponent } from './components/pages/main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UploadsComponent } from './components/uploads/uploads.component';
-
+import { NgxFileDropModule } from 'ngx-file-drop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,7 @@ import { UploadsComponent } from './components/uploads/uploads.component';
     FooterComponent,
     AboutComponent,
     MainComponent,
-    UploadsComponent
+    UploadsComponent,
 
   ],
   imports: [
@@ -27,7 +27,8 @@ import { UploadsComponent } from './components/uploads/uploads.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxFileDropModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

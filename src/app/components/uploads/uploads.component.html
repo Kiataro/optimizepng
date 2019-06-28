@@ -1,10 +1,14 @@
-<div>
-  <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
-    <div>
-      <input type="file" name="profile" (change)="onFileSelect($event)" />
-    </div>
-    <div>
-      <button type="submit">Upload</button>
-    </div>
-  </form>
-</div>
+<main role="main" class="inner cover" >
+  <h1 class="cover-heading">Online PNG optimizer by Sijeko</h1>
+</main>
+<div class="container__drop"></div>
+
+  <ngx-file-drop (onFileDrop)="dropped($event)" class="drop-zone"
+                 (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" dropZoneClassName="my-style"  multiple="true">
+    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+      <button type="button" (click)="openFileSelector()">Browse Files</button>
+    </ng-template>
+  </ngx-file-drop>
+
+
+

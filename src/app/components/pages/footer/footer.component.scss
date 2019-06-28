@@ -1,10 +1,12 @@
 $sijeko: rgb(255, 134, 5);
+footer {
+  padding-top: .3em;
+}
 .sijeko {
   color: $sijeko;
 }
 .mastfoot {
   color: rgba(255, 255, 255, .5);
-  position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
