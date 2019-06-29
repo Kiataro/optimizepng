@@ -12,6 +12,9 @@ import { MainComponent } from './components/pages/main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UploadsComponent } from './components/uploads/uploads.component';
 import { NgxFileDropModule } from 'ngx-file-drop';
+import {TooltipModule} from 'ngx-bootstrap';
+import {ProgressbarModule} from 'ngx-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,9 @@ import { NgxFileDropModule } from 'ngx-file-drop';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxFileDropModule
+    NgxFileDropModule,
+    TooltipModule.forRoot(),
+    ProgressbarModule.forRoot()
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

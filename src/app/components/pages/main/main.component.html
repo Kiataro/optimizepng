@@ -1,16 +1,23 @@
 
 
 <h2 class="cover-heading">Last optimized</h2>
-<div class= "container">
+<div class= "image-list">
   <a *ngFor="let Image of images$" [href]="Image.downloadUrl "  >
+
     <abbr [title]="
     Image.name+' / '+
-    Image.ratio*100+'%'+ ' / ' +
+    ((Image.original-Image.size)/Image.size*100| number: '1.2-2')+'%'+ ' / ' +
     (Image.original /1024 | number: '1.2-2') + ' Kb → '+
     (Image.size/1024 | number: '1.2-2') + ' Kb / WebP: ' +
-    (Image.webpSize*100/Image.original| number: '1.2-2')+'%'+ ' / ' +
+    ((Image.original-Image.webpSize)/Image.original*100| number: '1.2-2')+'%'+ ' / ' +
     (Image.original /1024 | number: '1.2-2') + ' Kb → '+
     (Image.webpSize/1024 | number: '1.2-2') + ' Kb' "
     >
-      <img [src]="Image.url" alt="pic" class="rounded" ></abbr></a>
+
+
+
+      <img [src]="Image.url" alt="pic" class="rounded" >
+     <progressbar [max]="Image.size/1024" [value]="[{'value':(Image.original-Image.size)/Image.size*100,'type':'warning'}, {'value':(Image.original-Image.webpSize)/Image.original*100,'type':'danger'}]" [striped]="true" [animate]="true"></progressbar>
+    </abbr></a>
+
 </div>

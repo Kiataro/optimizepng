@@ -30,7 +30,6 @@
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
-
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -96,7 +95,6 @@
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
-
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -131,6 +129,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "optimizepng"
 }
