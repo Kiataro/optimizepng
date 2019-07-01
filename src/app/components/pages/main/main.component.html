@@ -1,9 +1,12 @@
 
-
-<h2 class="cover-heading">Last optimized</h2>
+<app-uploads></app-uploads>
+<h2 class="cover-heading mt-3">Last optimized</h2>
 <div class= "image-list">
-  <a *ngFor="let Image of images$" [href]="Image.downloadUrl "  >
 
+  <a *ngFor="let Image of images$" [popover]="popTemplate" placement="left"
+     [outsideClick]="true"
+     >
+    <ng-template  #popTemplate><div class="popup"><a [href]="Image.downloadUrl">PNG</a>|<a [href]="Image.webpUrl">WEBP</a></div></ng-template>
     <abbr [title]="
     Image.name+' / '+
     ((Image.original-Image.size)/Image.size*100| number: '1.2-2')+'%'+ ' / ' +
@@ -17,7 +20,8 @@
 
 
       <img [src]="Image.url" alt="pic" class="rounded" >
-     <progressbar [max]="Image.size/1024" [value]="[{'value':(Image.original-Image.size)/Image.size*100,'type':'warning'}, {'value':(Image.original-Image.webpSize)/Image.original*100,'type':'danger'}]" [striped]="true" [animate]="true"></progressbar>
+     <progressbar [max]="200" [value]="[{'value':(Image.original-Image.webpSize)/Image.original*100,'type':'success'}, {'value':(Image.original-Image.size)/Image.size*100,'type':'warning'}]"></progressbar>
+
     </abbr></a>
 
 </div>

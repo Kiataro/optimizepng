@@ -12,16 +12,10 @@
   font-weight: 700;
 }
 img {
-
-
   margin: 5px;
   width: 85px;
   height: 85px;
   object-fit: cover;
-
-
-
-
 }
 .image-list{
   display: flex;
@@ -31,26 +25,19 @@ img {
 abbr {
   cursor: pointer;
 }
-
-
 progressbar {
-
   margin: 0 auto;
   padding: 0;
   max-height: 5px;
   max-width: 85px;
 
-
-
-
-
-
-
-
+}
+.popup {
+  color: white;
 
 }
-
-
-
+.popup a {
+  margin: 20px;
+}
 
 

@@ -14,6 +14,9 @@ import { UploadsComponent } from './components/uploads/uploads.component';
 import { NgxFileDropModule } from 'ngx-file-drop';
 import {TooltipModule} from 'ngx-bootstrap';
 import {ProgressbarModule} from 'ngx-bootstrap';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,6 @@ import {ProgressbarModule} from 'ngx-bootstrap';
     AboutComponent,
     MainComponent,
     UploadsComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,10 @@ import {ProgressbarModule} from 'ngx-bootstrap';
     ReactiveFormsModule,
     NgxFileDropModule,
     TooltipModule.forRoot(),
-    ProgressbarModule.forRoot()
+    ProgressbarModule.forRoot(),
+    ModalModule.forRoot(),
+    PopoverModule.forRoot(),
+    AngularFontAwesomeModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

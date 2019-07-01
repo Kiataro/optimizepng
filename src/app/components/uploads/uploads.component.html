@@ -6,9 +6,11 @@
   <ngx-file-drop (onFileDrop)="dropped($event)" class="drop-zone"
                  (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" dropZoneClassName="my-style"  multiple="true">
     <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
-      <button type="button" (click)="openFileSelector()">Browse Files</button>
+      <button type="button" (click)="openFileSelector()"><i class="fa fa-cloud-upload" aria-hidden="true"></i></button>
     </ng-template>
   </ngx-file-drop>
+
+
 
 
 
